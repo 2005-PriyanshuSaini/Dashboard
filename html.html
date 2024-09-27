@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="./scripts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+</head>
+<body>
+    <header class="futuristic-header">
+        <div class="logo-container">
+            <img src="./Arka logo.svg" alt="Logo" class="logo">
+            <h1 class="brand-title">Dashboard</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li> <!-- Home icon -->
+                <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li> <!-- Chart icon -->
+                <li><a href="#"><i class="fas fa-file-alt"></i> Reports</a></li> <!-- File icon -->
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li> <!-- Settings icon -->
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <input type="text" class="search-input" placeholder="Search...">
+            <a href="#" class="login-btn"><i class="fas fa-user"></i> Login</a> <!-- User icon -->
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="sidebar-title"><i class="fas fa-bars"></i> Menu</h2> <!-- Menu icon -->
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li> <!-- Dashboard icon -->
+                    <li><a href="#"><i class="fas fa-users"></i> Users</a></li> <!-- Users icon -->
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li> <!-- Settings icon -->
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li> <!-- Logout icon -->
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="main-content">
+            <section class="greetings-section">
+                <div class="greeting-container">
+                    <div id="greeting-text">Welcome, <span id="user-name">User</span></div>
+                    <div id="subtext">Your dashboard is ready to view.</div>
+                </div>
+            </section>
+
+            <div class="stats-cards">
+                <div class="card">
+                    <h3>Revenue</h3>
+                    <p>$32,400</p>
+                </div>
+                <div class="card">
+                    <h3>Users</h3>
+                    <p>1,232</p>
+                </div>
+                <div class="card">
+                    <h3>Orders</h3>
+                    <p>892</p>
+                </div>
+                <div class="card">
+                    <h3>Returns</h3>
+                    <p>43</p>
+                </div>
+            </div>
+
+            <div class="dashboard-container">
+                <!-- Satisfaction Widget -->
+                <div class="card satisfaction-widget-new">
+                  <div class="animated-progress-wrapper">
+                    <svg class="progress-ring" width="150" height="150">
+                      <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                      <circle class="circle-progress" cx="75" cy="75" r="60"></circle>
+                    </svg>
+                    <div class="progress-number">85%</div>
+                  </div>
+                  <h3>Satisfaction</h3>
+                </div>
+              
+                <!-- Efficiency Widget -->
+                <div class="card satisfaction-widget-second">
+                  <div class="animated-progress-wrapper">
+                    <svg class="progress-ring" width="150" height="150">
+                      <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                      <circle class="circle-progress" cx="75" cy="75" r="60"></circle>
+                    </svg>
+                    <div class="progress-number">70%</div>
+                  </div>
+                  <h3>Efficiency</h3>
+                </div>
+              </div>
+              
+              <!-- Charts Section -->
+              <div class="charts-section">
+                <div class="chart-container">
+                    <h3 class="chart-title">Sales Overview</h3>
+                    <canvas id="lineChart"></canvas>
+                    <p class="chart-details">This graph shows the sales trend from January to June.</p>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">Performance Comparison</h3>
+                    <canvas id="barChart"></canvas>
+                    <p class="chart-details">This graph compares performance metrics across different months.</p>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">Platform Distribution</h3>
+                    <canvas id="pieChart"></canvas>
+                    <p class="chart-details">This pie chart represents the distribution of platforms.</p>
+                </div>
+                
+              </div>
+              
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
